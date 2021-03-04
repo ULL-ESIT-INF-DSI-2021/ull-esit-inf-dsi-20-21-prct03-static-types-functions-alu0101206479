@@ -6,18 +6,12 @@ function isValid(cadena) {
         numero1 = '';
         numero2 = 0;
         contador = 0;
-        while (cadena[i] == '0' || cadena[i] == '1' || cadena[i] == '2' ||
-            cadena[i] == '3' || cadena[i] == '4' || cadena[i] == '5' ||
-            cadena[i] == '6' || cadena[i] == '7' || cadena[i] == '8' ||
-            cadena[i] == '9') {
+        while (/\d/.test(cadena[i])) {
             numero1 = numero1 + cadena[i];
             i = i + 1;
         }
         numero2 = parseInt(numero1);
-        while (cadena[i] != '0' && cadena[i] != '1' && cadena[i] != '2' &&
-            cadena[i] != '3' && cadena[i] != '4' && cadena[i] != '5' &&
-            cadena[i] != '6' && cadena[i] != '7' && cadena[i] != '8' &&
-            cadena[i] != '9' && i < cadena.length) {
+        while (!(/\d/.test(cadena[i])) && i < cadena.length) {
             contador++;
             i = i + 1;
         }

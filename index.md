@@ -96,9 +96,9 @@ En este disponemos de 3 funciones:
 
   * Función `decimalToFactorial(numero: number): string`: A esta función se le pasa como parámetro un número entero, lo pasa a notación decimal y lo retorna. Para ello lo primero que se hace es que a través de un bucle `ẁhile` se obtiene el factorial mayor por debajo del número y posteriormente se hace la siguiente formula `463 = 3 x 5! + 4 x 4! + 1 x 3! + 0 x 2! + 1 x 1! + 0 x 0!` a través de un bucle `for`, donde los números que multiplican a los factoriales se obtienen haciendo la división entre el resto (El cual empieza siendo el número entero y en las siguientes iteraciones pasa a ser el número menos lo que se va sacando) y el factorial. Esta división la truncamos con la función `floor` para evitar problemas. Por lo tanto después de sacar ese número se multiplica por el factorial correspondiente y se va haciendo el sumatorio hasta que ya obtenemos la notación factorial.
 
-  * Función `factorialToDecimal(cadena: string): number`: A esta función se le pasa como parámetro una notación factorial, obtiene el número entero que representa y lo retorna. Para ello se crea una variable auxiliar, en este caso `j`, la cual se va incrementando para ir cogiendo los números de la notación de izquierda a derecha. Posteriormente a través de un bucle `for` que va desde el tamaño de la notación hasta 0, multiplicamos el número correspondiente de la notación (marcado por la j) por el factorial correspondiente (marcado por la i) y haremos el sumatorio moviendonos en todas las posiciones de la notación. Finalmente se obtiene el número entero que representa dicha notación y se retorna
+  * Función `factorialToDecimal(cadena: string): number`: A esta función se le pasa como parámetro una notación factorial, obtiene el número entero que representa y lo retorna. Para ello se crea una variable auxiliar, en este caso `j`, la cual se va incrementando para ir cogiendo los números de la notación de izquierda a derecha. Posteriormente a través de un bucle `for` que va desde el tamaño de la notación hasta 0, multiplicamos el número correspondiente de la notación (marcado por la `j`) por el factorial correspondiente (marcado por la `i`) y haremos el sumatorio moviendonos en todas las posiciones de la notación. Finalmente se obtiene el número entero que representa dicha notación y se retorna
 
-  * Función `function factorial(n: number): number`: A esta función se le pasa como parámetro un número y retorna el factorial de dicho número. Para ello la función utiliza recursividad multiplicando el número por el factorial del número-1, siendo el caso base que cuando el número que se pase por parámetro sea igual a 0, retorne 1.
+  * Función `function factorial(n: number): number`: A esta función se le pasa como parámetro un número y retorna el factorial de dicho número. Para ello la función utiliza `recursividad` multiplicando el número por el factorial del número-1, siendo el caso base que cuando el número que se pase por parámetro sea igual a 0, retorne 1.
 
 El código del ejercicio sería el siguiente:
 
@@ -150,4 +150,4 @@ El código del ejercicio sería el siguiente:
 
 Salida del código:
 
-![Salida_ej2](/images/salida_ej1.png)
+![Salida_ej2](/images/salida_ej2.png)

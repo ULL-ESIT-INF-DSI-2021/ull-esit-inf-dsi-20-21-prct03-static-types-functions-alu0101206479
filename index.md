@@ -6,9 +6,10 @@
 #### Introducción
 Esto es un informe para poder llevar a cabo la **práctica 3 de Desarrollo de Sistemas Informáticos**, hemos aprendido a crear una estructura de directorios adecuada, a usar los tipos de datos estáticos y las funciones de TypeScript. Hemos resuelto 10 ejercicios de los cuales bastantes se resolvían usando [expresiones regulares](https://www.w3schools.com/js/js_regexp.asp) (Por lo que también hemos aprendido a trabajar con ellas en programación). En este informe se mostrarán la resolución de los ejercicios y la explicación de estas soluciónes.
 
-#### Objetivos
 
+#### Objetivos
 Los objetivos de esta práctica han sido crear la estructura de directorios adecuada para trabajar y resolver los 10 ejercicios que nos planteaban en el enunciado, para así familiarizarnos más profundamente con TypeScript.
+
 
 #### Crear la estructura básica y adecuada del proyecto
 Para crear la [estructura básica del proyecto](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html), lo haremos a través de la guía que se abre si pinchamos en el hiperenlace (En la bibliografía también esta el enlace dicha guía). Pero resumiendo, lo primero que se hará es crear un directorio y entrar a él con los siguiente comando:
@@ -41,12 +42,11 @@ Wrote to /home/usuario/theory-examples/package.json:
 
 Seguidamente también crearemos el fichero tsconfig.json
 
-#### Ejercicios
 
+#### Ejercicios
 En cuanto a los ejercicios que se mostrarán a continuación, podemos ver sus respectivos enunciados [en el enunciado de la práctica 3], los haremos todos en el directorio `/src`.
 
 ##### Ejercicio 1 - Años bisiestos
-
 En este ejercicio se creará la función `isLeapYear(year: number): boolean`, la cual recibirá como parámetro el año y retornará true o false dependiendo si es bisiesto o si no lo es respectivamente. Lo primero que la función hace es la comprobación de que el año sea divisible por 4, si no lo es la función retorna false ya que en ese caso el año no sería bisiesto. Pero si lo fuera, se comprueba que sea divisible también por 100 y en el caso que no lo sea se retorna true ya que el año sería bisiesto. Pero si fuera divisible por 100 también, se comprueba si es divisible por 400, si lo es el año sería bisiesto (la función retornaría true) y si no lo es el año no lo sería (la función retornaría false).
 
 El código del ejercicio sería el siguiente:
@@ -91,7 +91,6 @@ Salida del código:
 
 
 ##### Ejercicio 2 - Notación decimal y factorial
-
 En este disponemos de 3 funciones:
 
   * Función `decimalToFactorial(numero: number): string`: A esta función se le pasa como parámetro un número entero, lo pasa a notación decimal y lo retorna. Para ello lo primero que se hace es crear las variables necesarias y a través de un bucle `ẁhile` se obtiene el factorial mayor por debajo del número y posteriormente se hace la siguiente formula `463 = 3 x 5! + 4 x 4! + 1 x 3! + 0 x 2! + 1 x 1! + 0 x 0!` a través de un bucle `for`, donde los números que multiplican a los factoriales se obtienen haciendo la división entre el resto (El cual empieza siendo el número entero y en las siguientes iteraciones pasa a ser el número menos lo que se va sacando) y el factorial. Esta división la truncamos con la función `floor` para evitar problemas. Por lo tanto después de sacar ese número se multiplica por el factorial correspondiente, se va haciendo el sumatorio hasta que ya obtenemos la notación factorial y la retornamos.
@@ -154,7 +153,6 @@ Salida del código:
 
 
 ##### Ejercicio 3 - Validador de mensajes
-
 En este ejercicio crearemos la funcion `isValid(cadena: string): boolean` para comprobar si un mensaje es válido según diversas condiciones. A esta función le entra como parámetro una cadena de texto y retorna true o false dependiendo si la cadena es válida o no respectivamente.
 
 En esta función lo primero que se hará es crear las variables necesarias para posteriormente a través de un bucle `for` ir moviendonos por los números de la cadena, ya que las letras las vamos a comprobar dentro del último bucle `while` que se encuentra.
@@ -223,7 +221,6 @@ Salida del código:
 
 
 ##### Ejercicio 4 - Conversor de estilo
-
 En este ejercicio dispondremos de las siguientes dos funciones:
 
   * Función `fromSnakeToCamelCase(snakeCase: string): string`: Esta función recibe como parámetro una cadena en formato snakeCase (Con palabras separadas por barrabaja) y devuelve como resultado la cadena en formato camelCase (Con palabras separadas por la primera letra mayúscula de cada palabra a partir de la segunda palabra). Para ello se utiliza una variable denominada `camelCase` que en principio esta vacía y es donde se almacenará la cadena en el nuevo formato. Se utiliza un bucle `for` en el que se avanza en la cadena y se va comprobando en cada caracter si se encuentra una barrabaja. Mientras no se encuentre se va a ir introduciendo cada caracter de la cadena anterior en la variable creada y cuando se encuentre se va a ignorar y se va a introducir la letra que viene después en mayúscula (Esto se hace con la funcion `toUpperCase()`), a parte también se va a incrementar la `i`. Finalmente cuando se acabe el bucle `for` se retorna la cadena resultante.
@@ -281,7 +278,6 @@ Salida del código:
 
 
 ##### Ejercicio 5 - Un solo golpe
-
 En este ejercicio se creará la función `onePunch(cadena: string): string`, la cual recibirá como parámetro una cadena de texto y si esta es vacía devolverá la cadena "Broken!", pero si no lo es devolverá la cadena ordenada, sin las "a" y si las "e". Para ello lo primero que se realiza es comprobar si la cadena de entrada es vacía y si lo es retornar la cadena correspondiente. Pero si no lo es lo que se hace es que la cadena se separa en palabras a través de la función `split(" ")`, se ordena alfabéticamente a través de la función `sort()`, se vuelve a unir con espacios entre medio a través de la función `join(" ")`, se quitan las "a" y las "e" a través de la función `replace(/[ae]/g, "")`, en la cual utilizamos una `expresión regular`. Y finalmente se retorna la cadena.
 
 El código del ejercicio sería el siguiente:
@@ -326,7 +322,6 @@ Salida del código:
 
 
 ##### Ejercicio 6 - Conversor ISBN
-
 En este ejercicio se creará la función `isValidISBN(isbn: string): boolean`, la cual recibirá como parámetro una cadena de texto que representará un ISBN y devolverá como resultado true o false dependiendo si el resultado es válido o no, respectivamente. Para ello lo primero que se hace es que a través de la función `replace(/[-]/g, "")` (La cual utiliza una `expresión regular`) quitaremos los guiones de la cadena por si acaso el ISBN se haya pasado con los números separados por guiones.
 
 Posteriormente declararemos la variable `sumatorio` que esta inicializada a cero en la que después a través de un bucle `for` en el cual avanzamos en la cadena, se irá almacenando el sumatorio de la siguiente formula (La cual determina que el ISBN sea válido o no):
@@ -394,7 +389,6 @@ Salida del código:
 
 
 ##### Ejercicio 7 - El siguiente número
-
 En este ejercicio se creará la función `siguienteNumero(numero: number): number`, la cual recibirá como parámetro un entero positivo y devolverá el siguiente número mayor que pueda ser formado al reposicionar sus dígitos. Para ello lo primero que se hace es crear la variable `numText` que almacenará el `number` que entra a la función en `string` a través de la función `toFixed()`, esto se hace para poder ir analizando los dígitos del número entre sí e ir sustituyéndolos. También se crea una variable auxiliar que servirá para almacenar contenido posteriormente. 
 
 Lo siguiente que se hará es crear un bucle `for` en el que nos movemos desde el final del número hasta el principio y otro bucle for en el que nos movemos al revés (desde el principio hasta el final). Lo que hacemos es que el dígito que estemos analizando (Empezando por el de la derecha) lo comparamos con el de su izquierda y lo vamos intercambiando si es menor o igual que este, hasta que encontremos uno que es mayor, que se intercambiaría y la función retornaría el número nuevo. Hariamos esto susesivamente moviéndonos por los digitos del número si no encontramos uno mayor.
@@ -464,7 +458,6 @@ Salida del código:
 
 
 ##### Ejercicio 8 - Contando IPs
-
 En este ejercicio se creará la función `ipsInRange(ip1: string, ip2: string): number`, la cual recibirá como parámetro dos cadenas que representan las IPs y devuelve un valor numérico que represente el número de IPs disponibles en el rango correspondiente. Para ello lo primero que haremos en la función es crear dos constantes tipo string que almacenarán cada número de las IPs (serían 4 en total), también crearemos la variable `rango` que será la que contenga el rango de direcciones y la vairable `n` que nos servirá como variable auxiliar.
 
 Posteriormente haremos un bucle `for` que servirá para movernos en los números de las IPs de derecha a izquiera y hacer el sumatorio de sus respectivas restas multiplicadas por n (n que cada vez que nos movamos a la izquierda va a multiplicar su valor por 256, que va a ser el rango de direcciones disponibles entre cada valor de la resta).
@@ -511,7 +504,6 @@ Salida del código:
 
 
 ##### Ejercicio 9 - Entrenador Pokemon
-
 En este ejercicio se creará la función `dañoPokemon(tipoPokemon1: string, tipoPokemon2: string, ataque1: number, defensa2: number)`, la cual recibirá como parámetro el tipo de Pokemon que tiene, el tipo de Pokemon de su oponente, su capacidad de ataque y la capacidad de defensa de su oponente. La función devolverá como resultado el daño causado. 
 
 Esto se basará en la siguiente formula, donde `ataque` es tu capacidad de ataque, `defensa` es la capacidad de defensa del oponente y la efectividad del ataque varía dependiendo de los tipos de pokemon que esten batallando (se puede ver en el enunciado de la práctica):
@@ -642,7 +634,6 @@ Salida del código:
 
 
 ##### Ejercicio 10 - Validador de nombre usuario
-
 En este ejercicio se creará la función `isValidUsername(usuario: string): boolean`, la cual recibirá como parámetro una cadena con un nombre de usuario y devolverá true o false dependiendo si el nombre es válido o no lo es, respectivamente. 
 
 Para ello, realizaremos diversas comprobaciones a traves de condicionales `if`, si alguna no se cumple la función retorna false, entre ellas:
@@ -712,7 +703,6 @@ Poco a poco con las prácticas me estoy dando cuenta de que cuanto más me famil
 
 
 #### Bibliografía
-
 Nombre | Enlaces
 -------|--------
 Enunciado de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct03-types-functions/

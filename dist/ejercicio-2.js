@@ -28,5 +28,9 @@ function factorial(n) {
     }
     return n * factorial(n - 1);
 }
-console.log(decimalToFactorial(463));
-console.log(factorialToDecimal("341010"));
+let numeroEj2 = 463;
+let funcionEj2 = decimalToFactorial(463);
+console.log(`\nEl número ${numeroEj2} codificado en notación factorial sería: ${funcionEj2}`);
+numeroEj2 = "341010";
+funcionEj2 = factorialToDecimal("341010");
+console.log(`\nLa notacion factorial ${numeroEj2} sería el número entero: ${funcionEj2}`);

@@ -1,5 +1,4 @@
-function dañoPokemon(tipoPokemon1: string,
-    tipoPokemon2: string, ataque1: number, defensa2: number) {
+function dañoPokemon(tipoPokemon1: string, tipoPokemon2: string, ataque1: number, defensa2: number) {
   let efectividad: number = 0;
   let daño: number = 0;
 
@@ -11,7 +10,7 @@ function dañoPokemon(tipoPokemon1: string,
         if (tipoPokemon2 == "hierba") {
           efectividad = 2;
         }
-        if (tipoPokemon2 == "electrico") {
+        if (tipoPokemon2 == "eléctrico") {
           efectividad = 1;
         }
         if (tipoPokemon2 == "agua") {
@@ -23,7 +22,7 @@ function dañoPokemon(tipoPokemon1: string,
         if (tipoPokemon2 == "agua") {
           efectividad = 2;
         }
-        if (tipoPokemon2 == "electrico") {
+        if (tipoPokemon2 == "eléctrico") {
           efectividad = 1;
         }
         if (tipoPokemon2 == "fuego") {
@@ -31,7 +30,7 @@ function dañoPokemon(tipoPokemon1: string,
         }
         break;
 
-      case "electrico":
+      case "eléctrico":
         if (tipoPokemon2 == "agua") {
           efectividad = 2;
         }
@@ -54,13 +53,58 @@ function dañoPokemon(tipoPokemon1: string,
   return daño;
 }
 
-console.log(dañoPokemon("fuego", "fuego", 1, 1));
-console.log(dañoPokemon("agua", "agua", 1, 1));
-console.log(dañoPokemon("hierba", "hierba", 1, 1));
-console.log(dañoPokemon("electrico", "electrico", 1, 1));
-console.log(dañoPokemon("fuego", "hierba", 1, 1));
-console.log(dañoPokemon("fuego", "agua", 1, 1));
-console.log(dañoPokemon("fuego", "electrico", 1, 1));
-console.log(dañoPokemon("agua", "hierba", 1, 1));
-console.log(dañoPokemon("agua", "electrico", 1, 1));
-console.log(dañoPokemon("hierba", "electrico", 1, 1));
+let tipoPokemon1 = "fuego";
+let tipoPokemon2 = "hierba";
+let ataque = 4;
+let defensa = 3;
+let funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "fuego";
+tipoPokemon2 = "agua";
+ataque = 3;
+defensa = 7;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "fuego";
+tipoPokemon2 = "eléctrico";
+ataque = 8;
+defensa = 6;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "agua";
+tipoPokemon2 = "hierba";
+ataque = 2;
+defensa = 7;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "agua";
+tipoPokemon2 = "eléctrico";
+ataque = 9;
+defensa = 5;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "hierba";
+tipoPokemon2 = "eléctrico";
+ataque = 7;
+defensa = 7;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);
+
+tipoPokemon1 = "fuego";
+tipoPokemon2 = "fuego";
+ataque = 2;
+defensa = 1;
+funcionEj9 = dañoPokemon(tipoPokemon1, tipoPokemon2, ataque, defensa);
+console.log(`\nTipo pokemon atacante: ${tipoPokemon1}, tipo pokemon defensor: ${tipoPokemon2}, ataque: ${ataque}, defensa: ${defensa}:`);
+console.log(`\tDaño del ataque: ${funcionEj9}`);

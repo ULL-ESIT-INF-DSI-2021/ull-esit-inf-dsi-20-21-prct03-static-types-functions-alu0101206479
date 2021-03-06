@@ -21,10 +21,25 @@ function siguienteNumero(numero) {
     }
     return -1;
 }
-console.log(siguienteNumero(1275));
-console.log(siguienteNumero(12));
-console.log(siguienteNumero(513));
-console.log(siguienteNumero(2017));
-console.log(siguienteNumero(9));
-console.log(siguienteNumero(111));
-console.log(siguienteNumero(531));
+console.log(`\nNúmero -> Siguiente número mayor: `);
+let numeroEj7 = 1275;
+let funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`\n${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 12;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 513;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 2017;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 9;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 111;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);
+numeroEj7 = 531;
+funcionEj7 = siguienteNumero(numeroEj7);
+console.log(`${numeroEj7} -> ${funcionEj7}`);

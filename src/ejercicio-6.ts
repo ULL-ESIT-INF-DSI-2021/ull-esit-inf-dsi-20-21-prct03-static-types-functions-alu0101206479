@@ -1,5 +1,8 @@
 function isValidISBN(isbn: string): boolean {
   isbn = isbn.replace(/[-]/g, "");
+  if (isbn.length < 10) {
+    return false;
+  }
   let sumatorio: number = 0;
 
   for (let i = 0; i<isbn.length; i++) {
@@ -17,5 +20,26 @@ function isValidISBN(isbn: string): boolean {
   }
 }
 
-console.log(isValidISBN("3-598-21507-X"));
-console.log(isValidISBN("359821507X"));
+let isbn: string = "3-598-21508-8";
+let funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);
+
+isbn = "3598215088";
+funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);
+
+isbn = "3-598-21507-X";
+funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);
+
+isbn = "359821507X";
+funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);
+
+isbn = "35-98-285";
+funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);
+
+isbn = "3598215086";
+funcionEj6 = isValidISBN(isbn);
+console.log(`\nEl ISBN "${isbn}" es válido: ${funcionEj6}`);

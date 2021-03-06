@@ -23,5 +23,15 @@ function fromCamelToSnakeCase(camelCase) {
     }
     return snakeCase;
 }
-console.log(fromSnakeToCamelCase("hola_mundo_digital"));
-console.log(fromCamelToSnakeCase("holaMundoDigital"));
+let nombre = "sample_string";
+let funcionEj4 = fromSnakeToCamelCase(nombre);
+console.log(`\nEl nombre en formato Snake Case "${nombre}", en formato Camel Case sería: ${funcionEj4}`);
+nombre = "the_stealth_warrior";
+funcionEj4 = fromSnakeToCamelCase(nombre);
+console.log(`\nEl nombre en formato Snake Case "${nombre}", en formato Camel Case sería: ${funcionEj4}`);
+nombre = "sampleString";
+funcionEj4 = fromCamelToSnakeCase(nombre);
+console.log(`\nEl nombre en formato Camel Case "${nombre}", en formato Snake Case sería: ${funcionEj4}`);
+nombre = "theStealthWarrior";
+funcionEj4 = fromCamelToSnakeCase(nombre);
+console.log(`\nEl nombre en formato Camel Case "${nombre}", en formato Snake Case sería: ${funcionEj4}`);

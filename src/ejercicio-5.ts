@@ -1,21 +1,31 @@
-function onePunch(cadena: string) {
+function onePunch(cadena: string): string {
   if (cadena == "") {
     return "Broken!";
   }
-  const palabras: string = cadena.split(" ").sort().join(" ");
-  let salida: string = "";
 
-  for (let i = 0; i < palabras.length; i++) {
-    if (palabras[i] != "e" && palabras[i] != "a") {
-      salida = salida + palabras[i];
-    }
-  }
+  cadena = cadena.split(" ").sort().join(" ").replace(/[ae]/g, "");
 
-  return salida;
+  return cadena;
 }
 
-console.log(onePunch('Beard Jeans Hairbrush Knuckleduster Sand'));
-console.log(onePunch('Sock Beard Vest Lady Sage'));
-console.log(onePunch('Beard Sack Gun Parachute Face-Kicking-Shoes'));
-console.log(onePunch('Snot Snow Soda Tank Beard'));
-console.log(onePunch(''));
+console.log(`\nDespués de separar, ordenar, unir las cadenas de nuevo y eliminar todas las apariciones de las letras a y e, las cadenas quedarian de la siguiente manera: `);
+
+let cadena: string = "Beard Jeans Hairbrush Knuckleduster Sand";
+let funcionEj5: string = onePunch(cadena);
+console.log(`\n'${cadena}' => '${funcionEj5}'`);
+
+cadena = "Sock Beard Vest Lady Sage";
+funcionEj5 = onePunch(cadena);
+console.log(`'${cadena}' => '${funcionEj5}'`);
+
+cadena = "Beard Sack Gun Parachute Face-Kicking-Shoes";
+funcionEj5 = onePunch(cadena);
+console.log(`'${cadena}' => '${funcionEj5}'`);
+
+cadena = "Snot Snow Soda Tank Beard";
+funcionEj5 = onePunch(cadena);
+console.log(`'${cadena}' => '${funcionEj5}'`);
+
+cadena = "";
+funcionEj5 = onePunch(cadena);
+console.log(`'${cadena}' => '${funcionEj5}'`);

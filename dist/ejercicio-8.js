@@ -9,6 +9,16 @@ function ipsInRange(ip1, ip2) {
     }
     return rango;
 }
-console.log(ipsInRange("10.0.0.0", "10.2.0.0"));
-console.log(ipsInRange("10.0.0.0", "10.0.1.0"));
-console.log(ipsInRange("20.0.0.10", "20.0.1.0"));
+console.log("\nRangos IPs == IPs disponibles en ese rango:");
+let ip1 = "10.0.0.0";
+let ip2 = "10.2.0.0";
+let funcionEj8 = ipsInRange(ip1, ip2);
+console.log(`\n${ip1}, ${ip2} == ${funcionEj8}`);
+ip1 = "10.0.0.0";
+ip2 = "10.0.1.0";
+funcionEj8 = ipsInRange(ip1, ip2);
+console.log(`${ip1}, ${ip2} == ${funcionEj8}`);
+ip1 = "20.0.0.10";
+ip2 = "20.0.1.0";
+funcionEj8 = ipsInRange(ip1, ip2);
+console.log(`${ip1}, ${ip2} == ${funcionEj8}`);

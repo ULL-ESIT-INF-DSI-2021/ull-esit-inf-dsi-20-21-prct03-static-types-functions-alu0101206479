@@ -1,4 +1,4 @@
-function decimalToFactorial(numero: number) {
+function decimalToFactorial(numero: number): string {
   let factorialMayor: number = 0;
   let notacionFactorial: string = '';
   let numeroNotacion: number = 0;
@@ -34,5 +34,10 @@ function factorial(n: number): number {
   return n * factorial(n-1);
 }
 
-console.log(decimalToFactorial(463));
-console.log(factorialToDecimal("341010"));
+let numeroEj2: number | string = 463;
+let funcionEj2: number | string = decimalToFactorial(463);
+console.log(`\nEl número ${numeroEj2} codificado en notación factorial sería: ${funcionEj2}`);
+
+numeroEj2 = "341010";
+funcionEj2 = factorialToDecimal("341010");
+console.log(`\nLa notacion factorial ${numeroEj2} sería el número entero: ${funcionEj2}`);

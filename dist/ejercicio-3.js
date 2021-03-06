@@ -1,21 +1,21 @@
 function isValid(cadena) {
-    let numero1 = '';
-    let numero2 = 0;
+    let digitos = '';
+    let numero = 0;
     let contador = 0;
     for (let i = 0; i < cadena.length; i = i) {
-        numero1 = '';
-        numero2 = 0;
+        digitos = '';
+        numero = 0;
         contador = 0;
         while (/\d/.test(cadena[i])) {
-            numero1 = numero1 + cadena[i];
+            digitos = digitos + cadena[i];
             i = i + 1;
         }
-        numero2 = parseInt(numero1);
+        numero = parseInt(digitos);
         while (!(/\d/.test(cadena[i])) && i < cadena.length) {
             contador++;
             i = i + 1;
         }
-        if (numero2 == contador) {
+        if (numero == contador) {
             continue;
         }
         else {
@@ -24,8 +24,18 @@ function isValid(cadena) {
     }
     return true;
 }
-console.log(isValid(""));
-console.log(isValid("3hey5hello2hi"));
-console.log(isValid("4code10helloworld"));
-console.log(isValid("4coe10helloworld"));
-console.log(isValid("4code10helloorld"));
+let mensaje = "";
+let funcionEj3 = isValid(mensaje);
+console.log(`\nEl mensaje "${mensaje}" es valido: ${funcionEj3}`);
+mensaje = "3hey5hello2hi";
+funcionEj3 = isValid(mensaje);
+console.log(`\nEl mensaje "${mensaje}" es valido: ${funcionEj3}`);
+mensaje = "4code10helloworld";
+funcionEj3 = isValid(mensaje);
+console.log(`\nEl mensaje "${mensaje}" es valido: ${funcionEj3}`);
+mensaje = "4coe10helloworld";
+funcionEj3 = isValid(mensaje);
+console.log(`\nEl mensaje "${mensaje}" es valido: ${funcionEj3}`);
+mensaje = "4code10helloorld";
+funcionEj3 = isValid(mensaje);
+console.log(`\nEl mensaje "${mensaje}" es valido: ${funcionEj3}`);

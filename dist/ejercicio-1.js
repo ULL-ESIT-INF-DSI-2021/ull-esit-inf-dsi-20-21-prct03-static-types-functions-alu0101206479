@@ -16,7 +16,15 @@ function isLeapYear(year) {
         return false;
     }
 }
-console.log(isLeapYear(1997));
-console.log(isLeapYear(1996));
-console.log(isLeapYear(1900));
-console.log(isLeapYear(2000));
+let año = 1997;
+let funcionEj1 = isLeapYear(año);
+console.log(`\nEl año ${año} es bisiesto: ${funcionEj1}`);
+año = 1996;
+funcionEj1 = isLeapYear(año);
+console.log(`\nEl año ${año} es bisiesto: ${funcionEj1}`);
+año = 1900;
+funcionEj1 = isLeapYear(año);
+console.log(`\nEl año ${año} es bisiesto: ${funcionEj1}`);
+año = 2000;
+funcionEj1 = isLeapYear(año);
+console.log(`\nEl año ${año} es bisiesto: ${funcionEj1}`);

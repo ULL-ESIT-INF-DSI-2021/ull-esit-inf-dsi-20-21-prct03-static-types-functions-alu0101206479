@@ -397,7 +397,9 @@ Salida del código:
 
 En este ejercicio se creará la función `siguienteNumero(numero: number): number`, la cual recibirá como parámetro un entero positivo y devolverá el siguiente número mayor que pueda ser formado al reposicionar sus dígitos. Para ello lo primero que se hace es crear la variable `numText` que almacenará el `number` que entra a la función en `string` a través de la función `toFixed()`, esto se hace para poder ir analizando los dígitos del número entre sí e ir sustituyéndolos. También se crea una variable auxiliar que servirá para almacenar contenido posteriormente. 
 
-Lo siguiente que se hará es crear un bucle `for` en el que nos movemos desde el final del número hasta el principio
+Lo siguiente que se hará es crear un bucle `for` en el que nos movemos desde el final del número hasta el principio y otro bucle for en el que nos movemos al revés (desde el principio hasta el final). Lo que hacemos es que el dígito que estemos analizando (Empezando por el de la derecha) lo comparamos con el de su izquierda y lo vamos intercambiando si es menor o igual que este, hasta que encontremos uno que es mayor, que se intercambiaría y la función retornaría el número nuevo. Hariamos esto susesivamente moviéndonos por los digitos del número si no encontramos uno mayor.
+
+Si nunca se encuentra un dígito mayor por el que intercambiar después de revisar todos los digitos del número, la función retornará -1.
 
 El código del ejercicio sería el siguiente:
 
@@ -713,31 +715,9 @@ Poco a poco con las prácticas me estoy dando cuenta de que cuanto más me famil
 
 Nombre | Enlaces
 -------|--------
-Introducción a Markdown | https://guides.github.com/features/mastering-markdown/
-Información sobre GitHub Pages | https://docs.github.com/en/github/working-with-github-pages
-Sitio web de Jekyll | https://jekyllrb.com/
-GutHub Learning Lab | https://lab.github.com/
-Curso de GitHub Pages | https://lab.github.com/githubtraining/github-pages
-Visual Studio Code | https://code.visualstudio.com/
-Instalar Visual Studio Code | https://code.visualstudio.com/docs/setup/setup-overview
-Tutorial VSCode sobre Additional Components | https://code.visualstudio.com/docs/setup/additional-components
-Tutorial VSCode sobre User Interface | https://code.visualstudio.com/docs/getstarted/userinterface
-Tutorial VSCode sobre Basic Editing | https://code.visualstudio.com/docs/editor/codebasics
-Tutorial VSCode sobre Extension MarketPlace | https://code.visualstudio.com/docs/editor/extension-gallery
-Tutorial VSCode sobre IntelliSense | https://code.visualstudio.com/docs/editor/intellisense
-Tutorial VSCode sobre Code Navigation | https://code.visualstudio.com/docs/editor/editingevolved
-Tutorial VSCode sobre Debugging | https://code.visualstudio.com/docs/editor/debugging
-Tutorial VSCode sobre Version Control | https://code.visualstudio.com/docs/editor/versioncontrol
-Tutorial VSCode sobre Working with GitHub | https://code.visualstudio.com/docs/editor/github
-Tutorial VSCode sobre Integrated Terminal | https://code.visualstudio.com/docs/editor/integrated-terminal
-Tutorial VSCode sobre Tasks | https://code.visualstudio.com/docs/editor/tasks
-Tutorial VSCode sobre Snippets | https://code.visualstudio.com/docs/editor/userdefinedsnippets
-Tutorial VSCode sobre Emmet | https://code.visualstudio.com/docs/editor/emmet
-Tutorial VSCode sobre Command Line | https://code.visualstudio.com/docs/editor/command-line
-Tutorial VSCode sobre  Multiroot Workspaces | https://code.visualstudio.com/docs/editor/multi-root-workspaces
-Tutorial VSCode sobre  Accessibility | https://code.visualstudio.com/docs/editor/accessibility
-Conectarnos desde VSCode a una máquina remota por SSH | https://code.visualstudio.com/docs/remote/ssh-tutorial
-Informe de la práctica 1 de DSI | https://ull-esit-inf-dsi-2021.github.io/ull-esit-inf-dsi-20-21-prct01-iaas-alu0101206479/
-Live Share Extension Pack | https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack
-Documentación de Visual Studio Live Share | https://docs.microsoft.com/en-us/visualstudio/liveshare/
-Libro Essential TypeScript: From Beginner to Pro | https://learning.oreilly.com/library/view/essential-typescript-from/9781484249796/html/Part_1.xhtml
+Enunciado de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct03-types-functions/
+Tutorial sobre los métodos que puede utilizar con `string` | https://www.w3schools.com/js/js_string_methods.asp
+Expresiones regulares en JavaScript | https://www.w3schools.com/js/js_regexp.asp
+Tutorial de creación de la estructura básica del proyecto | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html
+Sistema factorial | https://es.wikipedia.org/wiki/Factor%C3%A1dico
+Proceso de verificación ISBN-10 | https://en.wikipedia.org/wiki/International_Standard_Book_Number

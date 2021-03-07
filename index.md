@@ -677,6 +677,7 @@ Poco a poco con las prácticas me estoy dando cuenta de que cuanto más me famil
 
 
 #### Bibliografía
+
 Nombre | Enlaces
 -------|--------
 Enunciado de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct03-types-functions/

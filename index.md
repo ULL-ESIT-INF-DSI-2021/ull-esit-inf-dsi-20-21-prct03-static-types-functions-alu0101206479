@@ -12,35 +12,9 @@ Los objetivos de esta práctica han sido crear la estructura de directorios adec
 
 
 #### Crear la estructura básica y adecuada del proyecto
-Para crear la [estructura básica del proyecto](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html), lo haremos a través de la guía que se abre si pinchamos en el hiperenlace (En la bibliografía también esta el enlace dicha guía). Pero resumiendo, lo primero que se hará es crear un directorio y entrar a él con los siguiente comando:
+Para crear la [estructura básica del proyecto](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html), lo haremos a través de la guía que se abre si pinchamos en el hiperenlace (En la bibliografía también esta el enlace dicha guía). Pero resumiendo, la estructura que tiene que quedar ha de ser más o menos como la siguiente:
 
-```bash
-  [~()]$mkdir practica3
-  [~()]$cd practica3
-  [~/practica3()]$
-```
-
-Posteriormente crearemos el fichero `package.json` a través del cual gestionaremos las dependencias de nuestro proyecto, lo haremos con el comando:
-
-```bash
-[~/practica3()]$npm init --yes
-Wrote to /home/usuario/theory-examples/package.json:
-
-{
-  "name": "theory-examples",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
-```
-
-Seguidamente también crearemos el fichero tsconfig.json
+![Estructura de directorios](/images/estructurad.png)
 
 
 #### Ejercicios

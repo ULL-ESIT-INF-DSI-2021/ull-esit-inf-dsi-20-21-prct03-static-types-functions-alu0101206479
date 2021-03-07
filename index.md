@@ -12,7 +12,7 @@ Los objetivos de esta práctica han sido crear la estructura de directorios adec
 
 
 #### Crear la estructura básica y adecuada del proyecto
-Para crear la [estructura básica del proyecto](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html), lo haremos a través de la guía que se abre si pinchamos en el hiperenlace (En la bibliografía también esta el enlace a dicha guía). Pero resumiendo, la estructura que tiene que quedar ha de ser más o menos como la siguiente:
+Para crear la [estructura básica del proyecto](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-project-setup.html), lo haremos a través de la guía que se abre si pinchamos en el hiperenlace (En la bibliografía también esta el enlace a dicha guía). Pero resumiendo, la estructura que tiene que quedar ha de ser más o menos como la siguiente (Mostrandose a la izquierda la estructura de directorios y abiertos los ficheros de configuración):
 
 ![Estructura de directorios](/images/estructurad.png)
 
